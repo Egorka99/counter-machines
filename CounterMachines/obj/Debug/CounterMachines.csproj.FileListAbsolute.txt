@@ -1,0 +1,9 @@
+D:\java\counter-machines\CounterMachines\bin\Debug\CounterMachines.exe.config
+D:\java\counter-machines\CounterMachines\bin\Debug\CounterMachines.exe
+D:\java\counter-machines\CounterMachines\bin\Debug\CounterMachines.pdb
+D:\java\counter-machines\CounterMachines\obj\Debug\CounterMachines.csprojAssemblyReference.cache
+D:\java\counter-machines\CounterMachines\obj\Debug\CounterMachines.Form1.resources
+D:\java\counter-machines\CounterMachines\obj\Debug\CounterMachines.Properties.Resources.resources
+D:\java\counter-machines\CounterMachines\obj\Debug\CounterMachines.csproj.GenerateResource.cache
+D:\java\counter-machines\CounterMachines\obj\Debug\CounterMachines.exe
+D:\java\counter-machines\CounterMachines\obj\Debug\CounterMachines.pdb
