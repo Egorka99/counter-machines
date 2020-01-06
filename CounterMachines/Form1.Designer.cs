@@ -142,16 +142,18 @@
             this.buttonNextStep.Name = "buttonNextStep";
             this.buttonNextStep.Size = new System.Drawing.Size(131, 62);
             this.buttonNextStep.TabIndex = 31;
-            this.buttonNextStep.Text = "Следующий шаг";
+            this.buttonNextStep.Text = "Вычислить";
             this.buttonNextStep.UseVisualStyleBackColor = true;
             this.buttonNextStep.Click += new System.EventHandler(this.buttonNextStep_Click);
             // 
             // listBoxStates
             // 
+            this.listBoxStates.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxStates.FormattingEnabled = true;
+            this.listBoxStates.ItemHeight = 16;
             this.listBoxStates.Location = new System.Drawing.Point(29, 132);
             this.listBoxStates.Name = "listBoxStates";
-            this.listBoxStates.Size = new System.Drawing.Size(198, 238);
+            this.listBoxStates.Size = new System.Drawing.Size(198, 228);
             this.listBoxStates.TabIndex = 30;
             // 
             // label2
@@ -178,6 +180,7 @@
             // 
             this.textBoxResult.Location = new System.Drawing.Point(352, 50);
             this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ReadOnly = true;
             this.textBoxResult.Size = new System.Drawing.Size(163, 20);
             this.textBoxResult.TabIndex = 27;
             // 

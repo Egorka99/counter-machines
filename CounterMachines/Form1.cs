@@ -20,26 +20,58 @@ namespace CounterMachines
         {
             InitializeComponent();
             FirstAddend = String.Empty;
-            SecondAddend = String.Empty;
-            memoryTape.RowCount = 2;
-            memoryTape.ColumnCount = 11;
-            memoryTape.ClearSelection();
+            SecondAddend = String.Empty;  
+            memoryTape.ClearSelection(); 
         }  
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             FirstAddend = textBoxFirstAddend.Text;
-            SecondAddend = textBoxSecondAddend.Text;
+            SecondAddend = textBoxSecondAddend.Text; 
+
+            if (FirstAddend.Length > 5 || SecondAddend.Length > 5)
+            {
+                MessageBox.Show("Количество цифр не должно превышать 5");
+                return;
+            } 
+
+            for (int i = 0; i < FirstAddend.Length; i++)
+            {
+               if (FirstAddend.ElementAt(i) != '1')
+               {
+                    MessageBox.Show("Доступна только цифра 1, так как вычисления производятся в унарной системе");
+                    return;
+               }  
+            } 
+
+            for (int i = 0; i < SecondAddend.Length; i++)
+            {
+                if (SecondAddend.ElementAt(i) != '1')
+                {
+                    MessageBox.Show("Доступна только цифра 1, так как вычисления производятся в унарной системе");
+                    return;
+                }
+            }
+
+            textBoxResult.Text = FirstAddend + SecondAddend; 
 
             buttonCalculate.Enabled = false;
+            buttonNextStep.Enabled = true; 
 
             FillMemoryTape(); 
             //проверки
-        }
+        } 
 
-        private void FillMemoryTape() 
+        private void FillMemoryTape()  
         {
-            int Index = 1;
+            listBoxStates.Items.Clear();
+            memoryTape.Rows.Clear();
+            memoryTape.Refresh();
+             
+            memoryTape.RowCount = 2;
+            memoryTape.ColumnCount = 13; 
+
+            int Index = 1; 
               
             memoryTape.Rows[0].Cells[0].Value = "#"; 
             memoryTape.Rows[1].Cells[0].Value = "▲";  
@@ -57,6 +89,7 @@ namespace CounterMachines
             }
 
             memoryTape.Rows[0].Cells[Index++].Value = "#";
+
 
         }
  
@@ -99,6 +132,10 @@ namespace CounterMachines
                 if (currentCell == "#") break;
            
             }
+             
+            buttonNextStep.Enabled = false; 
+            buttonCalculate.Enabled = true;
+          
         } 
     }
 }
