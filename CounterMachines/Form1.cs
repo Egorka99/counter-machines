@@ -59,37 +59,45 @@ namespace CounterMachines
             memoryTape.Rows[0].Cells[Index++].Value = "#";
 
         }
-
+ 
         private void buttonNextStep_Click(object sender, EventArgs e)
         {
             listBoxStates.Items.Add("(q1)#->(q1)#R");
 
             for (int i = 1; i < memoryTape.ColumnCount; i++)
             {
-                memoryTape.Rows[1].Cells[i-1].Value = ""; 
-                memoryTape.Rows[1].Cells[i].Value = "▲";
-                memoryTape.Refresh();
-                 
+                string currentCell = memoryTape.Rows[0].Cells[i].Value.ToString();
 
-                if (memoryTape.Rows[0].Cells[i].Value.ToString() == "+")
-                {
-                    memoryTape.Rows[0].Cells[i].Value = "1";
-                    listBoxStates.Items.Add("(q1)1->(q1)1R");
-                    listBoxStates.Items.Add("(q1)+->(q2)1R");
-                    Thread.Sleep(1000); 
+                switch(currentCell)
+                { 
+                    case "+":
+                        memoryTape.Rows[1].Cells[i - 1].Value = "";
+                        memoryTape.Rows[1].Cells[i].Value = "▲";
+                        memoryTape.Refresh();
+                        memoryTape.Rows[0].Cells[i].Value = "1";
+                        listBoxStates.Items.Add("(q1)1->(q1)1R");
+                        listBoxStates.Items.Add("(q1)+->(q2)1R");
+                        Thread.Sleep(1000);
+                        break;
+                    case "#":
+                        memoryTape.Rows[1].Cells[i].Value = "";
+                        memoryTape.Rows[1].Cells[i-1].Value = "▲";
+                        memoryTape.Refresh(); 
+                        memoryTape.Rows[0].Cells[i - 1].Value = "#";
+                        listBoxStates.Items.Add("(q2)1->(q2)1R");
+                        listBoxStates.Items.Add("(q2)#->(q3)#L");
+                        listBoxStates.Items.Add("(q3)1->(q0)#L");
+                        break;
+                    default:
+                        memoryTape.Rows[1].Cells[i - 1].Value = "";
+                        memoryTape.Rows[1].Cells[i].Value = "▲";
+                        memoryTape.Refresh();
+                        Thread.Sleep(1000); 
+                        break; 
                 }
-                if (memoryTape.Rows[0].Cells[i].Value.ToString() == "#")
-                {
-                    memoryTape.Rows[0].Cells[i-1].Value = "#";
-                    listBoxStates.Items.Add("(q2)1->(q2)1R");
-                    listBoxStates.Items.Add("(q2)#->(q3)#L"); 
-                    listBoxStates.Items.Add("(q3)1->(q0)#L");
-                    break;
-                }  
-                else
-                {
-                    Thread.Sleep(1000);
-                }
+
+                if (currentCell == "#") break;
+           
             }
         } 
     }
