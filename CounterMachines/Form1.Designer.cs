@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.memoryTape = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBoxFirstAddend = new System.Windows.Forms.TextBox();
-            this.textBoxSecondAddend = new System.Windows.Forms.TextBox();
-            this.textBoxResult = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listBoxStates = new System.Windows.Forms.ListBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonNextStep = new System.Windows.Forms.Button();
             this.buttonCalculate = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonNextStep = new System.Windows.Forms.Button();
+            this.listBoxStates = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
+            this.textBoxSecondAddend = new System.Windows.Forms.TextBox();
+            this.textBoxFirstAddend = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.memoryTape)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -59,14 +59,14 @@
             this.memoryTape.ColumnHeadersHeight = 25;
             this.memoryTape.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.memoryTape.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.memoryTape.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.memoryTape.DefaultCellStyle = dataGridViewCellStyle1;
             this.memoryTape.Location = new System.Drawing.Point(29, 49);
             this.memoryTape.Name = "memoryTape";
             this.memoryTape.ReadOnly = true;
@@ -74,7 +74,7 @@
             this.memoryTape.RowHeadersWidth = 25;
             this.memoryTape.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.memoryTape.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.memoryTape.Size = new System.Drawing.Size(570, 25);
+            this.memoryTape.Size = new System.Drawing.Size(570, 42);
             this.memoryTape.TabIndex = 24;
             // 
             // tabControl1
@@ -104,64 +104,15 @@
             this.tabPage1.Text = "Сложение чисел в унарной системе";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // buttonCalculate
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(717, 522);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Что нить еще";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // textBoxFirstAddend
-            // 
-            this.textBoxFirstAddend.Location = new System.Drawing.Point(92, 50);
-            this.textBoxFirstAddend.Name = "textBoxFirstAddend";
-            this.textBoxFirstAddend.Size = new System.Drawing.Size(100, 20);
-            this.textBoxFirstAddend.TabIndex = 25;
-            // 
-            // textBoxSecondAddend
-            // 
-            this.textBoxSecondAddend.Location = new System.Drawing.Point(222, 50);
-            this.textBoxSecondAddend.Name = "textBoxSecondAddend";
-            this.textBoxSecondAddend.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSecondAddend.TabIndex = 26;
-            // 
-            // textBoxResult
-            // 
-            this.textBoxResult.Location = new System.Drawing.Point(352, 50);
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.Size = new System.Drawing.Size(163, 20);
-            this.textBoxResult.TabIndex = 27;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(198, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 20);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "+";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(328, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 20);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "=";
-            // 
-            // listBoxStates
-            // 
-            this.listBoxStates.FormattingEnabled = true;
-            this.listBoxStates.Location = new System.Drawing.Point(29, 132);
-            this.listBoxStates.Name = "listBoxStates";
-            this.listBoxStates.Size = new System.Drawing.Size(198, 238);
-            this.listBoxStates.TabIndex = 30;
+            this.buttonCalculate.Location = new System.Drawing.Point(545, 47);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(75, 23);
+            this.buttonCalculate.TabIndex = 32;
+            this.buttonCalculate.Text = "Вычислить";
+            this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // groupBox1
             // 
@@ -176,6 +127,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Машина Тьюринга";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Состояния:";
+            // 
             // buttonNextStep
             // 
             this.buttonNextStep.Location = new System.Drawing.Point(368, 120);
@@ -186,24 +146,64 @@
             this.buttonNextStep.UseVisualStyleBackColor = true;
             this.buttonNextStep.Click += new System.EventHandler(this.buttonNextStep_Click);
             // 
-            // buttonCalculate
+            // listBoxStates
             // 
-            this.buttonCalculate.Location = new System.Drawing.Point(545, 47);
-            this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(75, 23);
-            this.buttonCalculate.TabIndex = 32;
-            this.buttonCalculate.Text = "Вычислить";
-            this.buttonCalculate.UseVisualStyleBackColor = true;
-            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            this.listBoxStates.FormattingEnabled = true;
+            this.listBoxStates.Location = new System.Drawing.Point(29, 132);
+            this.listBoxStates.Name = "listBoxStates";
+            this.listBoxStates.Size = new System.Drawing.Size(198, 238);
+            this.listBoxStates.TabIndex = 30;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Состояния:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(328, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 20);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "=";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(198, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 20);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "+";
+            // 
+            // textBoxResult
+            // 
+            this.textBoxResult.Location = new System.Drawing.Point(352, 50);
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.Size = new System.Drawing.Size(163, 20);
+            this.textBoxResult.TabIndex = 27;
+            // 
+            // textBoxSecondAddend
+            // 
+            this.textBoxSecondAddend.Location = new System.Drawing.Point(222, 50);
+            this.textBoxSecondAddend.Name = "textBoxSecondAddend";
+            this.textBoxSecondAddend.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSecondAddend.TabIndex = 26;
+            // 
+            // textBoxFirstAddend
+            // 
+            this.textBoxFirstAddend.Location = new System.Drawing.Point(92, 50);
+            this.textBoxFirstAddend.Name = "textBoxFirstAddend";
+            this.textBoxFirstAddend.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFirstAddend.TabIndex = 25;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(717, 522);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Что нить еще";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
