@@ -136,6 +136,7 @@ namespace CounterMachines
             buttonNextStep.Enabled = false; 
             buttonCalculate.Enabled = true;
           
-        } 
+        }
+
     }
 }
